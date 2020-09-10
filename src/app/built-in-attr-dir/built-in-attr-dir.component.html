@@ -1,0 +1,13 @@
+<h4>NgClass and NgStyle</h4>
+
+<button class="btn btn-primary" (click)="gradientToggle = !gradientToggle">Toggle Gradient</button>
+
+<div [ngClass]="gradientToggle  ? 'blue-gradient' : 'red-gradient'"
+     [ngStyle]="{ color: 'white', 'font-family': 'Courier' }">
+     Texto DIV
+</div>
+
+<hr>
+
+<h4>NgNonBindable</h4>
+<p ngNonBindable> Exemplo de texto NonBindable: {{ username }} </p>

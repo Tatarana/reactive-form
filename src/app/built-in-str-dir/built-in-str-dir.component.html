@@ -1,0 +1,19 @@
+<button class="btn btn-primary" (click)="showList = !showList">Toooggle It</button>
+<hr>
+<div *ngIf="showList">
+  <ul class="list-group">
+    <li *ngFor="let message of messages; let i = index">
+      index: {{ i }}, message: {{ message }}
+    </li>
+  </ul>
+</div>
+
+<h4>NgSwitch</h4>
+<input type="text" class="form-control" [(ngModel)]="alertType"> <br>
+<div [ngSwitch]="alertType">
+  <div *ngSwitchCase="'success'" class="alert alert-sucess" role="alert">Nintendo Switch 01</div>
+  <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">Nintendo Switch 02</div>
+  <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">Nintendo Switch 03</div>
+  <div *ngSwitchCase="'danger'" class="alert alert-danger" role="alert">Nintendo Switch 04</div>
+  <div *ngSwitchDefault class="alert" role="alert">Texto Padrão</div>
+</div>

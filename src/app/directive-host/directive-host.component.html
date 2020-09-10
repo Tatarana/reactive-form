@@ -1,0 +1,25 @@
+<!-- Primeiro e segundo método -->
+<!--<input type="text" appChangeCase> -->
+
+<!-- Terceiro método -->
+<input type="text" [appChangeCase]="'lower'">
+
+
+<!-- Custom Structure Directive -->
+
+<!-- A: built-in -->
+<div *ngIf="showUnless">
+  <br> This will show
+</div>
+
+<!-- B: built-in using directive-host showUnless -->
+<ng-template [ngIf]="showUnless">
+  <div>
+    <br> This will show
+  </div>
+</ng-template>
+
+<!-- C: CUSTOM. Using unless directive -->
+<div *appUnless="false">
+  <br> This will show
+</div>

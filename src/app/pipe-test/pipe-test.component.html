@@ -1,0 +1,24 @@
+<p>
+pipe-test works!
+</p>
+Date toString: {{ dateToday }}
+<br>
+Date pipe: {{ dateToday | date }}
+
+<ul class="list-group">
+  <li class="list-group-item">Date toString: {{ dateToday }}</li>
+  <li class="list-group-item">Date pipe: {{ dateToday | date }}</li>
+  <li class="list-group-item">Date pipe with params: {{ dateToday | date: 'full' }}</li>
+  <li class="list-group-item">Date pipe with multiple params: {{ dateToday | date: 'full' | uppercase }}</li>
+</ul>
+
+<h4> Pure and Impure Pipes </h4>
+
+<button class="btn btn-primary" (click)="addUser()">AddUser</button>
+
+<ul class ="list-group">
+  <li class="list-group-item" *ngFor="let user of users">
+    <div class="alert alert-success" role="alert">UserId: {{ user.id }}, UserName: {{ user.name }}</div>
+  </li>
+</ul>
+
